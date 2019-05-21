@@ -29,6 +29,9 @@ codegen/
 # Simulink autosave extension
 *.autosave
 
+#Binary MATLAB Files for storing variables
+*.mat
+
 # Octave session info
 octave-workspace
 
