@@ -1,5 +1,5 @@
 function Parameters = Conformal_2D_ParameterCalculation(x_input,y_input,X_output,Y_output)
-% Calculates parameters X=[a1;b1,a0,b0] in the following equation using least squares
+% Calculates parameters X=[a1;b1;a0;b0] in the following equation using least squares
 %X=a1x+b1y+a0
 %Y=-b1x+a1y+b0
 % x_input is a Nx1 matrix containing x coordinate of control points in the input space
