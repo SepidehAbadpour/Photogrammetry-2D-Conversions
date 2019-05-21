@@ -7,11 +7,11 @@ function Parameters = Affine_2D_ParameterCalculation(x_input,y_input,X_output,Y_
 % x_output is a Nx1 matrix containing x coordinate of control points in the output space
 % y_output is a Nx1 matrix containing y coordinate of control points in the output space 
 NumberOfPoints = size(x_input,1);
-A = zeros(2*NumberOfPoints,1); % Coefficient matrix in AX = L
+A = zeros(2*NumberOfPoints,6); % Coefficient matrix in AX = L
 L = zeros(2*NumberOfPoints,1); % Right-hand matrix in AX = L
     for i = 1:NumberOfPoints
-        A(2*i-1,1:4) = [x_input(i,1) y_input(i,1) 1 0 0 0];
-        A(2*i,1:4) = [0 0 0 x_input(i,1) y_input(i,1) 1];
+        A(2*i-1,1:6) = [x_input(i,1) y_input(i,1) 1 0 0 0];
+        A(2*i,1:6) = [0 0 0 x_input(i,1) y_input(i,1) 1];
         L(2*i-1,1) = X_output(i,1);
         L(2*i,1) = Y_output(i,1);
     end
