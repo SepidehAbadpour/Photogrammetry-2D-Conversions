@@ -7,7 +7,7 @@ function Parameters = Conformal_2D_ParameterCalculation(x_input,y_input,X_output
 % x_output is a Nx1 matrix containing x coordinate of control points in the output space
 % y_output is a Nx1 matrix containing y coordinate of control points in the output space 
 NumberOfPoints = size(x_input,1);
-A = zeros(2*NumberOfPoints,1); % Coefficient matrix in AX = L
+A = zeros(2*NumberOfPoints,4); % Coefficient matrix in AX = L
 L = zeros(2*NumberOfPoints,1); % Right-hand matrix in AX = L
     for i = 1:NumberOfPoints
         A(2*i-1,1:4) = [x_input(i,1) y_input(i,1) 1 0];
