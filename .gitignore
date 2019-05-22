@@ -43,3 +43,7 @@ octave-workspace
 
 #Ignore TEXT File
 Fiducial_Photo_Coordinates.txt
+
+#Ignore Presentations
+TheoryOfErrors_DrMotagh_Part1.ppt
+TheoryOfErrors_DrMotagh_Part2.ppt
